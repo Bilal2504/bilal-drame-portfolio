@@ -242,7 +242,7 @@ function App() {
         <section className="education-section section-space" id="formation">
           <div className="section-wrap">
             <div className="section-heading education-heading">
-              <div><div className="section-label"><span>04</span><span>ÉTUDES</span></div><h2>Du logiciel à <em>l’intelligence artificielle.</em></h2></div>
+              <div><div className="section-label"><span>04</span><span>ÉTUDES</span></div><h2>Un parcours d’études<br />orienté <em>data.</em></h2></div>
               <p>Mon parcours de formation, du BTS SIO au Mastère Intelligence Artificielle & Big Data actuellement suivi à l’ESGI.</p>
             </div>
             <div className="education-grid">
