@@ -369,9 +369,16 @@ body { color: #e6e9e5; background: #111513; }
 .site-footer { border-color: #2c342f; }
 .site-footer .wordmark { color: #e6e9e5; }
 .site-footer a:last-child { color: #a0aaa2; }
+.education-current-row .company-mark { color: #d2dcc8; background: #293229; }
+.education-current-row .experience-main h3 { max-width: 360px; }
+.current-study-status { justify-self: start; align-self: center; padding: 9px 11px; color: #cbd6c1; border: 1px solid #3a453c; background: #252d27; font: 8px var(--mono); letter-spacing: .08em; }
 
 @media (max-width: 640px) {
   .education-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 26px; }
   .education-card { min-height: 174px; padding: 20px 19px 17px; }
   .education-card h3 { margin: 22px 0 20px; font-size: 18px; }
+}
+
+@media (max-width: 880px) {
+  .current-study-status { grid-column: 3; margin-top: 1px; }
 }

@@ -253,6 +253,12 @@ function App() {
                 <ul>{experience.points.map((point) => <li key={point}>{point}</li>)}</ul>
               </article>
             ))}
+            <article className="experience-row education-current-row">
+              <span className="experience-index">04</span>
+              <div className="company-mark" aria-hidden="true">IA</div>
+              <div className="experience-main"><p className="role-date">SEPT. 2026 — 2028</p><h3>Mastère Intelligence Artificielle & Big Data</h3><p className="role-title">ESGI <span>·</span> Formation en cours</p></div>
+              <span className="current-study-status">EN COURS</span>
+            </article>
           </div>
         </section>
 
