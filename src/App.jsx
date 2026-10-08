@@ -81,6 +81,11 @@ const skillGroups = [
   { label: 'Bases de données', items: ['SQL', 'PostgreSQL', 'MySQL', 'Modélisation'] },
 ]
 
+const formations = [
+  { level: 'BAC +3', title: 'Bachelor 3 — Chef de projet logiciel et réseau', establishment: 'ESGI', period: '2024–2025' },
+  { level: 'BAC +2', title: 'BTS SIO — spécialité SLAM', establishment: 'École Nationale de Commerce', period: '2020–2022' },
+]
+
 function Arrow({ diagonal = false }) {
   return <span aria-hidden="true" className="arrow">{diagonal ? '↗' : '→'}</span>
 }
@@ -144,7 +149,7 @@ function App() {
         <a className="wordmark" href="#accueil" aria-label="Bilal Dramé, accueil"><span>BD</span><b>.</b></a>
         <nav className="main-nav" aria-label="Navigation principale">
           <a href="#apropos">À propos</a>
-          <a href="#parcours">Parcours</a>
+          <a href="#formation">Formation</a>
           <a href="#projets">Projets</a>
         </nav>
         <a className="header-contact" href="mailto:bilaldrame2504@gmail.com">Me contacter <Arrow diagonal /></a>
@@ -202,10 +207,28 @@ function App() {
           </div>
         </section>
 
+        <section className="education-section section-space" id="formation">
+          <div className="section-wrap">
+            <div className="section-heading education-heading">
+              <div><div className="section-label"><span>02</span><span>FORMATION</span></div><h2>Un parcours tourné<br />vers <em>le logiciel & la data.</em></h2></div>
+              <p>Deux diplômes qui posent les bases de mon parcours en informatique et en gestion de projet.</p>
+            </div>
+            <div className="education-grid">
+              {formations.map((formation, index) => (
+                <article className="education-card" key={formation.title}>
+                  <div className="education-card-top"><span className="education-level">{formation.level}</span><span className="education-index">0{index + 1}</span></div>
+                  <h3>{formation.title}</h3>
+                  <div className="education-card-bottom"><strong>{formation.establishment}</strong><span>{formation.period}</span></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="projects-section section-space" id="projets">
           <div className="section-wrap">
             <div className="section-heading">
-              <div><div className="section-label"><span>02</span><span>PROJETS SÉLECTIONNÉS</span></div><h2>Du concret,<br /><em>en construction.</em></h2></div>
+              <div><div className="section-label"><span>03</span><span>PROJETS SÉLECTIONNÉS</span></div><h2>Du concret,<br /><em>en construction.</em></h2></div>
               <p>Un projet data à explorer et quelques réalisations web pour montrer l’autre facette de mon parcours.</p>
             </div>
             <div className="filter-row" role="group" aria-label="Filtrer les projets">
@@ -218,7 +241,7 @@ function App() {
 
         <section className="experience section-wrap section-space" id="parcours">
           <div className="section-heading experience-heading">
-            <div><div className="section-label"><span>03</span><span>PARCOURS</span></div><h2>Des expériences<br />au croisement de la <em>data & du code.</em></h2></div>
+            <div><div className="section-label"><span>04</span><span>EXPÉRIENCES</span></div><h2>Des expériences<br />au croisement de la <em>data & du code.</em></h2></div>
             <p>Trois missions, trois manières de transformer une information brute en résultat exploitable.</p>
           </div>
           <div className="experience-list">
@@ -231,18 +254,17 @@ function App() {
               </article>
             ))}
           </div>
-          <div className="education-strip"><span className="education-icon">↗</span><div><span className="role-date">FORMATION</span><p><strong>Bachelor 3 — Chef de projet logiciel et réseau</strong> <span>· ESGI, 2024–2025</span></p><p><strong>BTS SIO, spécialité SLAM</strong> <span>· École Nationale de Commerce, 2020–2022</span></p></div></div>
         </section>
 
         <section className="skills-section section-space">
           <div className="section-wrap skills-layout">
-            <div><div className="section-label"><span>04</span><span>OUTILS & COMPÉTENCES</span></div><h2>Une boîte à outils<br /><em>qui évolue.</em></h2><p className="skills-intro">Des bases solides en analyse et traitement, complétées par des outils de visualisation et de développement.</p></div>
+            <div><div className="section-label"><span>05</span><span>OUTILS & COMPÉTENCES</span></div><h2>Une boîte à outils<br /><em>qui évolue.</em></h2><p className="skills-intro">Des bases solides en analyse et traitement, complétées par des outils de visualisation et de développement.</p></div>
             <div className="skill-groups">{skillGroups.map((group, index) => <div className="skill-group" key={group.label}><span className="skill-index">0{index + 1}</span><div><h3>{group.label}</h3><div className="tag-list">{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></div></div>)}</div>
           </div>
         </section>
 
         <section className="contact section-wrap section-space" id="contact">
-          <div className="section-label"><span>05</span><span>ET MAINTENANT ?</span></div>
+          <div className="section-label"><span>06</span><span>ET MAINTENANT ?</span></div>
           <div className="contact-body"><div><p className="eyebrow"><span className="status-dot" /> OUVERT AUX ÉCHANGES</p><h2>On parle <em>d’un projet ?</em></h2><p>Une question, une collaboration ou une opportunité autour de la data et du web ? Écris-moi.</p></div><a className="contact-button" href="mailto:bilaldrame2504@gmail.com"><span>bilaldrame2504@gmail.com</span><Arrow diagonal /></a></div>
           <div className="contact-links"><a href={github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a><a href="mailto:bilaldrame2504@gmail.com">E-mail <Arrow diagonal /></a><span>France · Français / English</span></div>
         </section>

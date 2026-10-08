@@ -277,3 +277,101 @@ h1 em, h2 em { font-style: normal; color: #8bad4e; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* A quieter, darker palette with soft sage accents. */
+:root {
+  color: #e6e9e5;
+  background: #111513;
+  --ink: #e6e9e5;
+  --muted: #a0aaa2;
+  --paper: #111513;
+  --green: #b1bea0;
+  --line: #2c342f;
+}
+
+body { color: #e6e9e5; background: #111513; }
+::selection { color: #111513; background: #b1bea0; }
+.wordmark b, .hero h1 em, h1 em, h2 em, .contact h2 em { color: #b1bea0; }
+.site-header { border-color: #2c342f; }
+.main-nav a, .quiet-link, .about-details p, .section-heading > p,
+.featured-copy > div:nth-child(2) p, .compact-copy > p, .experience-row li,
+.skills-intro, .contact-body > div > p:last-child { color: #a0aaa2; }
+.main-nav a:hover, .quiet-link:hover, .site-footer a:hover, .text-link:hover { color: #d0d9c5; }
+.header-contact { border-color: #3b443d; }
+.eyebrow { color: #a0aaa2; }
+.eyebrow-divider, .hero-footnote, .principles span, .principles p,
+.project-meta, .experience-index, .role-date, .skill-index { color: #818b83; }
+.status-dot { background: #a1ae88; box-shadow: 0 0 0 4px rgba(161,174,136,.12); }
+.hero-lede { color: #a0aaa2; }
+.hero-footnote { border-color: #2c342f; }
+.button-dark { color: #111513; background: #dce2d8; }
+.button-dark:hover { color: #111513; background: #c9d2c3; }
+.button-dark .arrow, .contact-button .arrow { color: #738366; }
+.hero-art { background: #1a201c; }
+.chart-window { background: rgba(31,39,34,.96); }
+.ticker { color: #c1c8c0; background: #0b0e0c; }
+.ticker b, .section-label span:first-child, .github-more .arrow { color: #b1bea0; }
+.section-label { color: #9ba49d; }
+.about-details .text-link { border-color: #56634f; }
+.principles, .principles > div + div { border-color: #2c342f; }
+
+.education-section, .projects-section, .skills-section { background: #171c19; }
+.education-section { border-block: 1px solid #252d28; }
+.education-heading { margin-bottom: 0; }
+.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+.education-card { position: relative; display: flex; min-height: 194px; flex-direction: column; padding: 24px 25px 21px; border: 1px solid #343d36; background: #1c221e; }
+.education-card::before { position: absolute; inset: 0 auto 0 0; width: 2px; content: ''; background: #8d9d7b; }
+.education-card-top, .education-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.education-level, .education-index { font: 9px var(--mono); letter-spacing: .08em; }
+.education-level { padding: 7px 9px; color: #d1dac8; border: 1px solid #3a453c; background: #252d27; }
+.education-index { color: #858f87; }
+.education-card h3 { max-width: 440px; margin: 25px 0 23px; font-size: clamp(17px, 2vw, 22px); line-height: 1.35; letter-spacing: -.04em; }
+.education-card-bottom { margin-top: auto; padding-top: 15px; border-top: 1px solid #303832; font-size: 10px; }
+.education-card-bottom strong { font-size: 11px; font-weight: 700; }
+.education-card-bottom span { color: #9aa49b; font: 9px var(--mono); white-space: nowrap; }
+
+.filter-button { color: #a0aaa2; border-color: #3a443c; }
+.filter-button span { color: #89948b; }
+.filter-button:hover, .filter-button.active { color: #111513; border-color: #d6ddd2; background: #d6ddd2; }
+.filter-button.active span { color: #55614f; }
+.project-card { background: #1c221e; border-color: #303832; }
+.project-meta { color: #8e9990; }
+.featured-copy > div:nth-child(2) p, .compact-copy > p { color: #a0aaa2; }
+.tag { color: #c0c8c0; border-color: #3a443c; background: #222923; }
+.text-link { color: #e2e7e1; }
+.project-stat { border-color: #303832; }
+.project-stat span { color: #8e9990; }
+.visual-film { background: #202823; }
+.visual-tasks { background: #262e28; }
+.visual-tasks .visual-tag { color: #d3dacf; }
+.visual-tasks .visual-tag i { background: #a6b394; }
+.task-preview { background: #1b211d; box-shadow: 0 14px 30px rgba(0,0,0,.22); }
+.task-line { background: #566258; }
+.task-check { background: #819272; }
+.task-check.muted { border-color: #566258; }
+.visual-tasks .compact-arrow { color: #d9dfd6; border-color: #69756a; }
+.icon-link { border-color: #3b443d; }
+.github-more { color: #a0aaa2; border-color: #343d36; }
+
+.experience-list, .experience-row { border-color: #2c342f; }
+.company-mark { color: #cad4c4; background: #273029; }
+.role-title { color: #a0aaa2; }
+.role-title span { color: #626e65; }
+.experience-row li::before { background: #a1ae88; }
+.skill-groups, .skill-group { border-color: #333c35; }
+.skill-index { color: #a1ae88; }
+.skill-group .tag { border-color: #3a443c; background: #222923; }
+.contact-links a { color: #dce2dc; }
+.contact-links span, .site-footer { color: #89938b; }
+.contact-body { border-color: #2c342f; }
+.contact-button { color: #111513; background: #dce2d8; }
+.contact-button:hover { background: #c9d2c3; }
+.site-footer { border-color: #2c342f; }
+.site-footer .wordmark { color: #e6e9e5; }
+.site-footer a:last-child { color: #a0aaa2; }
+
+@media (max-width: 640px) {
+  .education-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 26px; }
+  .education-card { min-height: 174px; padding: 20px 19px 17px; }
+  .education-card h3 { margin: 22px 0 20px; font-size: 18px; }
+}
