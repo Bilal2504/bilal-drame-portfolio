@@ -84,6 +84,7 @@ const skillGroups = [
 const formations = [
   { level: 'BAC +3', title: 'Bachelor 3 — Chef de projet logiciel et réseau', establishment: 'ESGI', period: '2024–2025' },
   { level: 'BAC +2', title: 'BTS SIO — spécialité SLAM', establishment: 'École Nationale de Commerce', period: '2020–2022' },
+  { level: 'MASTÈRE', title: 'Intelligence Artificielle & Big Data', establishment: 'ESGI', period: 'SEPT. 2026 — 2028', status: 'EN COURS' },
 ]
 
 function Arrow({ diagonal = false }) {
@@ -148,9 +149,9 @@ function App() {
       <header className="site-header">
         <a className="wordmark" href="#accueil" aria-label="Bilal Dramé, accueil"><span>BD</span><b>.</b></a>
         <nav className="main-nav" aria-label="Navigation principale">
-          <a href="#apropos">À propos</a>
-          <a href="#formation">Formation</a>
           <a href="#projets">Projets</a>
+          <a href="#parcours">Expériences</a>
+          <a href="#formation">Études</a>
         </nav>
         <a className="header-contact" href="mailto:bilaldrame2504@gmail.com">Me contacter <Arrow diagonal /></a>
       </header>
@@ -207,28 +208,10 @@ function App() {
           </div>
         </section>
 
-        <section className="education-section section-space" id="formation">
-          <div className="section-wrap">
-            <div className="section-heading education-heading">
-              <div><div className="section-label"><span>02</span><span>FORMATION</span></div><h2>Un parcours tourné<br />vers <em>le logiciel & la data.</em></h2></div>
-              <p>Deux diplômes qui posent les bases de mon parcours en informatique et en gestion de projet.</p>
-            </div>
-            <div className="education-grid">
-              {formations.map((formation, index) => (
-                <article className="education-card" key={formation.title}>
-                  <div className="education-card-top"><span className="education-level">{formation.level}</span><span className="education-index">0{index + 1}</span></div>
-                  <h3>{formation.title}</h3>
-                  <div className="education-card-bottom"><strong>{formation.establishment}</strong><span>{formation.period}</span></div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="projects-section section-space" id="projets">
           <div className="section-wrap">
             <div className="section-heading">
-              <div><div className="section-label"><span>03</span><span>PROJETS SÉLECTIONNÉS</span></div><h2>Du concret,<br /><em>en construction.</em></h2></div>
+              <div><div className="section-label"><span>02</span><span>PROJETS SÉLECTIONNÉS</span></div><h2>Du concret,<br /><em>en construction.</em></h2></div>
               <p>Un projet data à explorer et quelques réalisations web pour montrer l’autre facette de mon parcours.</p>
             </div>
             <div className="filter-row" role="group" aria-label="Filtrer les projets">
@@ -241,7 +224,7 @@ function App() {
 
         <section className="experience section-wrap section-space" id="parcours">
           <div className="section-heading experience-heading">
-            <div><div className="section-label"><span>04</span><span>EXPÉRIENCES</span></div><h2>Des expériences<br />au croisement de la <em>data & du code.</em></h2></div>
+            <div><div className="section-label"><span>03</span><span>EXPÉRIENCES</span></div><h2>Des expériences<br />au croisement de la <em>data & du code.</em></h2></div>
             <p>Trois missions, trois manières de transformer une information brute en résultat exploitable.</p>
           </div>
           <div className="experience-list">
@@ -253,12 +236,24 @@ function App() {
                 <ul>{experience.points.map((point) => <li key={point}>{point}</li>)}</ul>
               </article>
             ))}
-            <article className="experience-row education-current-row">
-              <span className="experience-index">04</span>
-              <div className="company-mark" aria-hidden="true">IA</div>
-              <div className="experience-main"><p className="role-date">SEPT. 2026 — 2028</p><h3>Mastère Intelligence Artificielle & Big Data</h3><p className="role-title">ESGI <span>·</span> Formation en cours</p></div>
-              <span className="current-study-status">EN COURS</span>
-            </article>
+          </div>
+        </section>
+
+        <section className="education-section section-space" id="formation">
+          <div className="section-wrap">
+            <div className="section-heading education-heading">
+              <div><div className="section-label"><span>04</span><span>ÉTUDES</span></div><h2>Du logiciel à <em>l’intelligence artificielle.</em></h2></div>
+              <p>Mon parcours de formation, du BTS SIO au Mastère Intelligence Artificielle & Big Data actuellement suivi à l’ESGI.</p>
+            </div>
+            <div className="education-grid">
+              {formations.map((formation, index) => (
+                <article className="education-card" key={formation.title}>
+                  <div className="education-card-top"><span className="education-level">{formation.level}</span>{formation.status && <span className="education-status">{formation.status}</span>}<span className="education-index">0{index + 1}</span></div>
+                  <h3>{formation.title}</h3>
+                  <div className="education-card-bottom"><strong>{formation.establishment}</strong><span>{formation.period}</span></div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

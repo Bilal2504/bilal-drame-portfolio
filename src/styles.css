@@ -318,13 +318,14 @@ body { color: #e6e9e5; background: #111513; }
 .education-section, .projects-section, .skills-section { background: #171c19; }
 .education-section { border-block: 1px solid #252d28; }
 .education-heading { margin-bottom: 0; }
-.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+.education-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
 .education-card { position: relative; display: flex; min-height: 194px; flex-direction: column; padding: 24px 25px 21px; border: 1px solid #343d36; background: #1c221e; }
 .education-card::before { position: absolute; inset: 0 auto 0 0; width: 2px; content: ''; background: #8d9d7b; }
 .education-card-top, .education-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .education-level, .education-index { font: 9px var(--mono); letter-spacing: .08em; }
 .education-level { padding: 7px 9px; color: #d1dac8; border: 1px solid #3a453c; background: #252d27; }
 .education-index { color: #858f87; }
+.education-status { margin-left: auto; color: #cad5bf; font: 8px var(--mono); letter-spacing: .07em; }
 .education-card h3 { max-width: 440px; margin: 25px 0 23px; font-size: clamp(17px, 2vw, 22px); line-height: 1.35; letter-spacing: -.04em; }
 .education-card-bottom { margin-top: auto; padding-top: 15px; border-top: 1px solid #303832; font-size: 10px; }
 .education-card-bottom strong { font-size: 11px; font-weight: 700; }
@@ -369,16 +370,13 @@ body { color: #e6e9e5; background: #111513; }
 .site-footer { border-color: #2c342f; }
 .site-footer .wordmark { color: #e6e9e5; }
 .site-footer a:last-child { color: #a0aaa2; }
-.education-current-row .company-mark { color: #d2dcc8; background: #293229; }
-.education-current-row .experience-main h3 { max-width: 360px; }
-.current-study-status { justify-self: start; align-self: center; padding: 9px 11px; color: #cbd6c1; border: 1px solid #3a453c; background: #252d27; font: 8px var(--mono); letter-spacing: .08em; }
+
+@media (max-width: 880px) {
+  .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 640px) {
   .education-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 26px; }
   .education-card { min-height: 174px; padding: 20px 19px 17px; }
   .education-card h3 { margin: 22px 0 20px; font-size: 18px; }
-}
-
-@media (max-width: 880px) {
-  .current-study-status { grid-column: 3; margin-top: 1px; }
 }
