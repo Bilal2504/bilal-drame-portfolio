@@ -39,6 +39,12 @@ a:hover .arrow { transform: translate(2px, -2px); }
 .hero h1 { max-width: 690px; margin: 0; font-size: clamp(53px, 6.3vw, 82px); line-height: .99; letter-spacing: -.075em; font-weight: 700; }
 h1 em, h2 em { font-style: normal; color: #8bad4e; }
 .hero-lede { max-width: 495px; margin: 25px 0 0; color: #677168; font-size: 14px; line-height: 1.85; }
+.availability { max-width: 510px; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 21px; padding: 13px 14px; border: 1px solid var(--line); border-left: 2px solid #9aaa84; background: rgba(255,255,255,.025); }
+.availability-copy { display: grid; gap: 6px; }
+.availability-copy span { color: #b1bea0; font: 8px var(--mono); letter-spacing: .08em; }
+.availability-copy strong { font-size: 10px; line-height: 1.5; font-weight: 600; }
+.availability > a { flex: 0 0 auto; color: #dce2d8; font-size: 9px; font-weight: 700; }
+.availability > a .arrow { color: #b1bea0; }
 .hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 29px; }
 .button { display: inline-flex; align-items: center; padding: 15px 18px; font-size: 11px; font-weight: 700; }
 .button-dark { color: #f7f8f4; background: var(--ink); transition: background .2s ease, transform .2s ease; }
@@ -223,6 +229,9 @@ h1 em, h2 em { font-style: normal; color: #8bad4e; }
   .hero { min-height: 0; padding: 53px 0 32px; grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(49px, 13vw, 71px); }
   .hero-lede { max-width: 440px; margin-top: 18px; font-size: 12px; }
+  .availability { align-items: flex-start; flex-direction: column; gap: 10px; margin-top: 18px; }
+  .availability-copy strong { font-size: 10px; }
+  .availability > a { font-size: 10px; }
   .hero-actions { gap: 16px; margin-top: 22px; }
   .button { padding: 14px 13px; font-size: 10px; }
   .quiet-link { font-size: 10px; }

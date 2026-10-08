@@ -162,6 +162,10 @@ function App() {
             <p className="eyebrow"><span className="status-dot" /> DATA ANALYST <span className="eyebrow-divider">/</span> PROJETS WEB</p>
             <h1>Des données<br />brutes aux <em>idées claires.</em></h1>
             <p className="hero-lede">Je suis Bilal Dramé. J’analyse, je structure et je visualise les données pour les rendre utiles — avec un goût particulier pour les interfaces web bien pensées.</p>
+            <div className="availability">
+              <div className="availability-copy"><span>ALTERNANCE · MASTÈRE IA & BIG DATA</span><strong>2 ans · 1 semaine école / 3 semaines entreprise</strong></div>
+              <a href="mailto:bilaldrame2504@gmail.com">Me contacter par e-mail <Arrow diagonal /></a>
+            </div>
             <div className="hero-actions">
               <a className="button button-dark" href="#projets">Découvrir mes projets <Arrow /></a>
               <a className="quiet-link" href={github} target="_blank" rel="noreferrer">Mon GitHub <Arrow diagonal /></a>
