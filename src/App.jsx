@@ -82,9 +82,9 @@ const skillGroups = [
 ]
 
 const formations = [
+  { level: 'MASTÈRE', title: 'Intelligence Artificielle & Big Data', establishment: 'ESGI', period: 'SEPT. 2026 — 2028', status: 'EN COURS' },
   { level: 'BAC +3', title: 'Bachelor 3 — Chef de projet logiciel et réseau', establishment: 'ESGI', period: '2024–2025' },
   { level: 'BAC +2', title: 'BTS SIO — spécialité SLAM', establishment: 'École Nationale de Commerce', period: '2020–2022' },
-  { level: 'MASTÈRE', title: 'Intelligence Artificielle & Big Data', establishment: 'ESGI', period: 'SEPT. 2026 — 2028', status: 'EN COURS' },
 ]
 
 function Arrow({ diagonal = false }) {
